@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--hue: 360;
+}
+
+input[type='range'] {
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.hue::-moz-range-track {
+	background-image: linear-gradient(
+		to right,
+		rgb(255, 0, 0),
+		rgb(255, 255, 0),
+		rgb(0, 255, 0),
+		rgb(0, 255, 255),
+		rgb(0, 0, 255),
+		rgb(255, 0, 255),
+		rgb(255, 0, 0)
+	);
+}
+
+.hue::-webkit-slider-runnable-track {
+	background-image: linear-gradient(
+		to right,
+		rgb(255, 0, 0),
+		rgb(255, 255, 0),
+		rgb(0, 255, 0),
+		rgb(0, 255, 255),
+		rgb(0, 0, 255),
+		rgb(255, 0, 255),
+		rgb(255, 0, 0)
+	);
+}
+
+.brightness::-moz-range-track {
+	background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
+}
+
+.brightness::-webkit-slider-runnable-track {
+	background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
+}
+
+/* .saturation::-moz-range-track {
+	background-image: linear-gradient(
+		to right,
+		hsl(var(--hue), 0%, 50%),
+		hsl(var(--hue), 100%, 50%)
+	);
+} */
+
+.saturation::-webkit-slider-runnable-track {
+	background-image: linear-gradient(
+		to right,
+		hsl(var(--hue), 0%, 50%),
+		hsl(var(--hue), 100%, 50%)
+	);
+}
