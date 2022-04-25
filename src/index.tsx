@@ -1,3 +1,3 @@
-import ColorPicker from "./ColorPicker/ColorPicker";
+import ColorPicker, { Formats } from "./ColorPicker/ColorPicker";
 
-export { ColorPicker }
+export default Object.assign(ColorPicker, { Formats })
